@@ -19,7 +19,7 @@ def about_view(request, *args, **kwargs):
         "title": "Home Page",
         "page_visit_count": page_qs.count(),
         "total_visit_count": qs.count(),
-        "percent" : (page_qs.count() * 100) / qs.count()
+        "percent" : percent
     }
     PageVisit.objects.create(path=request.path)
     return render(request, "home.html", context)
