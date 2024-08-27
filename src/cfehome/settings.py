@@ -96,7 +96,7 @@ if DATABASE_URL is not None:
     'default': dj_database_url.config(
         default=DATABASE_URL,
         conn_health_checks=True,
-        conn_max_age=CONN_MAX_AGE    
+        conn_max_age=CONN_MAX_AGE
     )
 }
 
